@@ -10,7 +10,7 @@ pipeline {
                 /* python --version gets executed inside the Container */
                 bat "docker exec ${MY_CONTAINER} node --version "
                 /* the Container gets removed */
-                bat "docker rm -f ${MY_CONTAINER}"
+                bat "docker exec ${MY_CONTAINER} npm start"
                 }
             }
         }
